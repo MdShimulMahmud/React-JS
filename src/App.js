@@ -1,12 +1,17 @@
 import React from 'react';
-import Counter from './Counter';
+import Child from './components/inheritance/Child';
+import Emoji from './components/inheritance/Emoji';
+<<<<<<< Updated upstream
+=======
+
+import Counter from './components/Counter';
+>>>>>>> Stashed changes
+
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <Counter />
-            </header>
+            <Emoji>{({ addEmoji }) => <Child addEmoji={addEmoji} />}</Emoji>
         </div>
     );
 }
