@@ -1,17 +1,12 @@
 import React from 'react';
-import Child from './components/inheritance/Child';
-import Emoji from './components/inheritance/Emoji';
-<<<<<<< Updated upstream
-=======
-
-import Counter from './components/Counter';
->>>>>>> Stashed changes
-
+import Hover from './components/Hover';
+import Counter from './Counter';
 
 function App() {
     return (
         <div className="App">
-            <Emoji>{({ addEmoji }) => <Child addEmoji={addEmoji} />}</Emoji>
+            <Counter />
+            <Hover />
         </div>
     );
 }

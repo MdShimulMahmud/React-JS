@@ -1,7 +1,8 @@
 import React from 'react';
-function increment(prevState){
+
+function increment(prevState) {
     return {
-        count: prevState.count+ 1,
+        count: prevState.count + 1,
     };
 }
 
@@ -12,7 +13,6 @@ export default class Counter extends React.Component {
         this.setState(increment);
     };
 
-   
     render() {
         const { count } = this.state;
         return (
