@@ -1,8 +1,6 @@
 import React from 'react';
-import withCounter from '../HOC/withCounter';
 
-function Hover(props) {
-    const { count, handleClick } = props;
+function Hover({ count, handleClick }) {
     return (
         <div className="counter">
             <h3>{count}</h3>
@@ -12,4 +10,4 @@ function Hover(props) {
         </div>
     );
 }
-export default withCounter(Hover);
+export default Hover;
