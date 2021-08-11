@@ -1,27 +1,13 @@
-import React from 'react';
+import withCounter from './HOC/withCounter';
 
-function increment(prevState) {
-    return {
-        count: prevState.count + 1,
-    };
+function Counter({ count, handleClick }) {
+    return (
+        <div className="counter">
+            <h3>{count}</h3>
+            <button type="button" onClick={handleClick}>
+                Click me
+            </button>
+        </div>
+    );
 }
-
-export default class Counter extends React.Component {
-    state = { count: 0 };
-
-    handleClick = () => {
-        this.setState(increment);
-    };
-
-    render() {
-        const { count } = this.state;
-        return (
-            <div className="counter">
-                <h3>{count}</h3>
-                <button type="button" onClick={this.handleClick}>
-                    Click here
-                </button>
-            </div>
-        );
-    }
-}
+export default withCounter(Counter);
