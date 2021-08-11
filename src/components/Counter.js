@@ -15,11 +15,12 @@ export default class Counter extends React.Component {
 
     render() {
         const { count } = this.state;
+
         return (
             <div className="counter">
                 <h3>{count}</h3>
                 <button type="button" onClick={this.handleClick}>
-                    Click here
+                    <span>Click me</span>
                 </button>
             </div>
         );

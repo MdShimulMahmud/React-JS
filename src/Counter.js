@@ -1,5 +1,3 @@
-import withCounter from './HOC/withCounter';
-
 function Counter({ count, handleClick }) {
     return (
         <div className="counter">
@@ -10,4 +8,4 @@ function Counter({ count, handleClick }) {
         </div>
     );
 }
-export default withCounter(Counter);
+export default Counter;

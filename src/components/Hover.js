@@ -1,15 +1,22 @@
 import React from 'react';
-import withCounter from '../HOC/withCounter';
 
-function Hover(props) {
-    const { count, handleClick } = props;
+function Hover({ count, handleClick, theme, changeTheme }) {
+    const style =
+        theme === 'dark'
+            ? {
+                  backgroundColor: 'red',
+              }
+            : { backgroundColor: 'green' };
+
     return (
         <div className="counter">
-            <h3>{count}</h3>
-            <h3 onMouseOver={handleClick} onFocus>
-                Hover here
+            <h3 onMouseOver={handleClick} onFocus style={style}>
+                Hover {count} here
             </h3>
+            <button type="button" onClick={changeTheme}>
+                change theme
+            </button>
         </div>
     );
 }
-export default withCounter(Hover);
+export default Hover;
