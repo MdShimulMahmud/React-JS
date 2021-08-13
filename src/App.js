@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Counter from './components/Counter';
 import Section from './components/Section';
 import Wrapper from './components/Wrapper';
@@ -33,6 +34,23 @@ class App extends React.Component {
             </div>
         );
     }
+=======
+import Hover from './components/Hover';
+import Wrapper from './components/Wrapper';
+import Counter from './Counter';
+
+function App() {
+    return (
+        <div className="App">
+            <Wrapper
+                name={(count, handleClick) => <Counter count={count} handleClick={handleClick} />}
+            />
+            <Wrapper
+                name={(count, handleClick) => <Hover count={count} handleClick={handleClick} />}
+            />
+        </div>
+    );
+>>>>>>> d1bc18a73ac60ef3e3d1053d1aa0295a7a80f641
 }
 
 export default App;

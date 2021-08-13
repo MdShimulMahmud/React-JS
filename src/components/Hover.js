@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 function Hover({ count, handleClick, theme, changeTheme }) {
     const style =
         theme === 'dark'
@@ -8,6 +9,9 @@ function Hover({ count, handleClick, theme, changeTheme }) {
               }
             : { backgroundColor: 'green' };
 
+=======
+function Hover({ count, handleClick }) {
+>>>>>>> d1bc18a73ac60ef3e3d1053d1aa0295a7a80f641
     return (
         <div className="counter">
             <h3 onMouseOver={handleClick} onFocus style={style}>
