@@ -1,11 +1,12 @@
-import React from 'react';
-import Counter from './components/Counter';
+import Counter from './components/hooks/Counter';
+import FunctionalCounter from './components/hooks/FunctionalCounter';
 
 function App() {
     return (
-        <div>
+        <>
+            <FunctionalCounter />
             <Counter />
-        </div>
+        </>
     );
 }
 export default App;
