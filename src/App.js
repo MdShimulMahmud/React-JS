@@ -1,15 +1,7 @@
-import React, { useEffect, useRef } from 'react';
-import ForwardInput from './components/ShowInput';
+import React from 'react';
+import Counter from './components/Counter';
 
 function App() {
-    const inputRef = useRef('');
-    useEffect(() => {
-        inputRef.current.focus();
-    }, []);
-    return (
-        <div>
-            <ForwardInput ref={inputRef} type="text" placeholder="write here" />
-        </div>
-    );
+    return <Counter />;
 }
 export default App;

@@ -9,4 +9,5 @@ function ShowInput({ type, placeholder }, ref) {
 }
 
 const forwardInput = forwardRef(ShowInput);
+
 export default forwardInput;
