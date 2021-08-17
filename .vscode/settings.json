@@ -26,6 +26,10 @@
     "editor.formatOnSave": false,
     "editor.defaultFormatter": null
   },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
   "[javascriptreact]": {
     "editor.formatOnSave": false,
     "editor.defaultFormatter": null
