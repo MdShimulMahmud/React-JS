@@ -25,7 +25,6 @@ function Counter() {
             <button type="button" onClick={() => dispatch('decrement')}>
                 -
             </button>
-            
         </div>
     );
 }
