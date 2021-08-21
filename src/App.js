@@ -1,44 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import About from './components/About';
+import Error from './components/Error';
+import Home from './components/Home';
+import Login from './components/Login';
+import Navigation from './components/Navigation';
+import Services from './components/Services';
+import Todo from './components/Todo/Todo';
 
 function App() {
-    const products = [
-        { name: 'Iphone', price: '$499.99' },
-        { name: 'Samsung', price: '$399.99' },
-        { name: 'Oppo', price: '$99.99' },
-        { name: 'Realme', price: '$199.99' },
-    ];
-
-    const [users, setUsers] = useState([]);
-
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then((response) => response.json())
-            .then((data) => setUsers(data));
-
-        return () => {};
-    }, [users]);
     return (
-        <>
-            {' '}
-            <div>
-                <ul>
-                    {products.map((product) => (
-                        <li>
-                            <h2>
-                                {product.name} - {product.price}
-                            </h2>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div>
-                <p>
-                    {users.map((user) => (
-                        <li>{user.name}</li>
-                    ))}
-                </p>
-            </div>
-        </>
+        <Router>
+            <Navigation />
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/home">
+                    <Home />
+                </Route>
+                <Route path="/todos/:id">
+                    <Todo />
+                </Route>
+                <Route path="/todos">
+                    <Todo />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+                <Route path="/services">
+                    <Services />
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+                <Route>
+                    <Error />
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 export default App;
